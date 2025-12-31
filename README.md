@@ -1,3 +1,3 @@
-# goit-js-hw-01
+# goit-js-hw-02
 
-# İlk JS ödevim
+# İkinci JS ödevim
