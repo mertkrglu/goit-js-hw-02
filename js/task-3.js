@@ -1,13 +1,11 @@
-function getElementWidth(content, padding, border) {
-  const contentWidth = parseFloat(content);
-  const paddingWidth = parseFloat(padding);
-  const borderWidth = parseFloat(border);
+/* spam kontrol ödevi */
 
-  return (
-    contentWidth + paddingWidth * 2 + borderWidth * 2
-  ); /* padding ve border iki taraflı olduğundan 2 ile çarpılır */
+function checkForSpam(message) {
+  const lowerMessage = message.toLowerCase();
+
+  if (lowerMessage.includes("spam") || lowerMessage.includes("sale")) {
+    return true;
+  }
+
+  return false;
 }
-
-console.log(getElementWidth("50px", "8px", "4px")); // 74
-console.log(getElementWidth("60px", "12px", "8.5px")); // 101
-console.log(getElementWidth("200px", "0px", "0px")); // 200
